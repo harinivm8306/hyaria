@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #10b981;
+  --color-primary-dark: #059669;
+  --color-secondary: #3b82f6;
+  --color-accent: #f59e0b;
+  --color-bg-dark: #020617;
+  --color-bg-card: #0f172a;
+  --color-text-main: #f8fafc;
+  --color-text-muted: #94a3b8;
+}
+
+:root {
+  /* Dark Mode Default */
+  --background: #020617;
+  --foreground: #f8fafc;
+  --card-bg: #0f172a;
+  --primary: #10b981;
+  --primary-glow: rgba(16, 185, 129, 0.15);
+  --glass-bg: rgba(15, 23, 42, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --text-muted: #94a3b8;
+  --grid-color: rgba(255, 255, 255, 0.05);
+}
+
+.light {
+  /* Light Mode Overrides */
+  --background: #f1f5f9;
+  --foreground: #0f172a;
+  --card-bg: #ffffff;
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(0, 0, 0, 0.1);
+  --text-muted: #64748b;
+  --grid-color: rgba(0, 0, 0, 0.05);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glow-shadow {
+  box-shadow: 0 0 20px var(--primary-glow);
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}

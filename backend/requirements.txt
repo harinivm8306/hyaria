@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+pandas
+numpy
+scikit-learn
+tensorflow
+python-multipart
+pydantic
+scipy
+kagglehub
+pillow
